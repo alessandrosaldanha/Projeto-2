@@ -17,8 +17,8 @@ function verificarCadastro() {
             return;
         }
     }
-
-    // Se não encontrar o nome na tabela, adiciona o novo contato
+    
+// Se não encontrar o nome na tabela, adiciona o novo contato
     adicionarContato();
 }
 
@@ -27,10 +27,14 @@ function adicionarContato() {
     let telefone = document.getElementById("telefone").value;
 
     let tabela = document.getElementById("tabelaContatos");
-    let novaLinha = tabela.insertRow(-1); // Insere uma nova linha na última posição
+    let novaLinha = tabela.insertRow(-1);
+    // Insere uma nova linha na última posição
 
-    let celulaNome = novaLinha.insertCell(0); // Insere uma célula na primeira posição da linha
-    let celulaTelefone = novaLinha.insertCell(1); // Insere uma célula na segunda posição da linha
+    let celulaNome = novaLinha.insertCell(0);
+    // Insere uma célula na primeira posição da linha
+    
+    let celulaTelefone = novaLinha.insertCell(1); 
+    // Insere uma célula na segunda posição da linha
 
     celulaNome.innerHTML = nome;
     celulaTelefone.innerHTML = telefone;
